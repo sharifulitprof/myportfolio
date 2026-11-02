@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Shariful Islam | IT Professional | System & Network Administration</title>
+    <meta name="description" content="IT Portfolio of Md. Shariful Islam - 8+ years of experience in System Administration, Network Management, Microsoft 365, Cisco, MikroTik, and Enterprise Support.">
+    
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar & Glassmorphism */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+
+        .bg-grid-pattern {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+        }
+
+        .glass-card {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 6s infinite ease-in-out;
+        }
+
+        /* Dedicated A4 Print Stylesheet to prevent 16-page broken layout */
+        @page {
+            size: A4;
+            margin: 12mm 14mm;
+        }
+        @media print {
+            html, body {
+                background: #ffffff !important;
+                color: #0f172a !important;
+                font-size: 10pt !important;
+                line-height: 1.35 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .no-print, .screen-only {
+                display: none !important;
+            }
+            #print-document {
+                display: block !important;
+                width: 100% !important;
+            }
+            .print-avoid-break {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            .print-page-break {
+                page-break-before: always !important;
+                break-before: page !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white transition-colors duration-300 bg-grid-pattern min-h-screen flex flex-col">
+
+    <!-- ==================== SCREEN INTERACTIVE WEBSITE (Hidden during Print) ==================== -->
+    <div class="screen-only flex flex-col min-h-screen">
+
+    <!-- Top Status Bar (Clean & Professional - No Guide Links) -->
+    <div class="bg-slate-900 text-slate-300 border-b border-slate-800 text-xs py-2 px-4 no-print">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 font-mono">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="text-emerald-400 font-semibold">SYSTEM STATUS: ONLINE</span>
+                <span class="hidden sm:inline text-slate-600">|</span>
+                <span class="hidden sm:inline text-slate-400">8+ Years IT Operations & Infrastructure</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="mailto:shariful.cse.18@gmail.com" class="flex items-center gap-1.5 hover:text-white transition">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-400"></i>
+                    <span>shariful.cse.18@gmail.com</span>
+                </a>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="tel:+8801733633233" class="hidden md:flex items-center gap-1.5 hover:text-white transition">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>+88 01733633233</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-40 glass-card bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-cyan-500 flex items-center justify-center text-white font-bold font-mono text-lg shadow-lg shadow-brand-500/25 group-hover:scale-105 transition">
+                    SI
+                </div>
+                <div>
+                    <span class="font-bold text-base sm:text-lg tracking-tight block leading-none">Md. Shariful Islam</span>
+                    <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 block mt-1">SysAdmin • Network • M365</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+                <a href="#about" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">About</a>
+                <a href="#skills" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Skills</a>
+                <a href="#experience" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Experience</a>
+                <a href="#case-studies" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition flex items-center gap-1.5">
+                    <span>Case Studies</span>
+                    <span class="px-1.5 py-0.5 text-[10px] font-mono rounded bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">6</span>
+                </a>
+                <a href="#sop" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">SOP & Process</a>
+                <a href="#credentials" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Credentials</a>
+                <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2">
+                <!-- Theme Toggle -->
+                <button id="themeToggle" aria-label="Toggle Dark Mode" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition cursor-pointer">
+                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
+                    <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-slate-700"></i>
+                </button>
+
+                <!-- Print / Save PDF -->
+                <button onclick="window.print()" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold transition cursor-pointer shadow-sm">
+                    <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                    <span>Save / Print PDF</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Open Menu" class="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 pt-3 pb-5 space-y-2">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm">1. About Me & Strengths</a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm">2. Technical Skills Matrix</a>
+            <a href="#experience" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm">3. Professional Experience (8+ Yrs)</a>
+            <a href="#case-studies" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm">4. Case Studies (6 Projects)</a>
+            <a href="#sop" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm">5. Process Documentation (SOP)</a>
+            <a href="#credentials" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm">6. Certifications & Education</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm">7. Contact & Availability</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section class="relative overflow-hidden pt-10 pb-20 lg:pt-16 lg:pb-24 border-b border-slate-200/80 dark:border-slate-800/80">
+            <!-- Decorative Glows -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-500/15 rounded-full blur-3xl pointer-events-none animate-pulse-slow"></div>
+            <div class="absolute top-1/3 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                    
+                    <!-- Left Column: Intro & Bio -->
+                    <div class="lg:col-span-8 space-y-6">
+                        <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-400 text-xs font-mono font-medium">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            <span>IT PORTFOLIO • CASE STUDIES, PROCESSES & CREDENTIALS</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                                Md. Shariful Islam
+                            </h1>
+                            <p class="text-base sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-brand-600 via-indigo-500 to-cyan-500 dark:from-brand-400 dark:via-sky-400 dark:to-cyan-300 bg-clip-text text-transparent">
+                                IT Professional | System & Network Administration | Microsoft 365
+                            </p>
+                        </div>
+
+                        <!-- Updated Exact Overview Text Requested by User -->
+                        <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+                            IT professional with over 8 years of experience in system administration, network management and end-user support across diverse IT environments. Hands-on expertise in Windows and macOS platforms, Windows Server and Active Directory, VMware virtualization, Microsoft 365 administration, and network infrastructure built on Cisco, MikroTik and Meraki. Experienced in CCTV and access control systems, IT asset management and security compliance, with a focus on system uptime, security and dependable day-to-day IT operations.
+                        </p>
+
+                        <!-- Quick Contact Chips (Fixed Phone Truncation across all devices) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2 max-w-3xl">
+                            <!-- Email Chip with Copy -->
+                            <div class="flex items-center justify-between p-3.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="p-2.5 rounded-lg bg-brand-500/10 text-brand-600 dark:text-brand-400 shrink-0">
+                                        <i data-lucide="mail" class="w-4 h-4"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 block">Email Address</span>
+                                        <a href="mailto:shariful.cse.18@gmail.com" class="text-xs sm:text-sm font-medium hover:text-brand-500 break-all block">shariful.cse.18@gmail.com</a>
+                                    </div>
+                                </div>
+                                <button onclick="copyToClipboard('shariful.cse.18@gmail.com', 'Email address copied!')" title="Copy Email" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-brand-500 transition shrink-0 cursor-pointer ml-2">
+                                    <i data-lucide="copy" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <!-- Phone Chip (Zero Truncation - Responsive Flex Wrap) -->
+                            <div class="flex items-center justify-between p-3.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="flex items-center gap-3 min-w-0 flex-1">
+                                    <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                                        <i data-lucide="phone-call" class="w-4 h-4"></i>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 block">Direct Phone</span>
+                                        <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100">
+                                            <a href="tel:+8801733633233" class="hover:text-emerald-500 whitespace-nowrap">+88 01733633233</a>
+                                            <span class="text-slate-400 hidden sm:inline">|</span>
+                                            <a href="tel:+8801977533466" class="hover:text-emerald-500 whitespace-nowrap">+88 01977533466</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button onclick="copyToClipboard('+88 01733633233, +88 01977533466', 'Phone numbers copied!')" title="Copy Phone Numbers" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-emerald-500 transition shrink-0 cursor-pointer ml-2">
+                                    <i data-lucide="copy" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <!-- Location Chip -->
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm md:col-span-2">
+                                <div class="p-2.5 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 shrink-0">
+                                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                </div>
+                                <div class="flex-1 flex flex-wrap items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 block">Current Location</span>
+                                        <span class="text-xs sm:text-sm font-medium">Basundhara R/A, Vatara, Dhaka-1212, Bangladesh</span>
+                                    </div>
+                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                        On-Site & Remote Ready
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action CTA Buttons -->
+                        <div class="flex flex-wrap items-center gap-3 pt-2 no-print">
+                            <a href="#case-studies" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 transition transform hover:-translate-y-0.5">
+                                <i data-lucide="folder-git-2" class="w-4 h-4"></i>
+                                <span>Explore 6 IT Case Studies</span>
+                            </a>
+                            <a href="#experience" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 font-semibold text-sm transition">
+                                <i data-lucide="briefcase" class="w-4 h-4 text-brand-500"></i>
+                                <span>Work History</span>
+                            </a>
+                            <a href="#sop" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 font-semibold text-sm transition">
+                                <i data-lucide="file-check-2" class="w-4 h-4 text-emerald-500"></i>
+                                <span>View SOP Sample</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Profile Card & Executive Metrics -->
+                    <div class="lg:col-span-4">
+                        <div class="relative mx-auto max-w-sm lg:max-w-none bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-xl">
+                            <div class="flex flex-col items-center text-center">
+                                <!-- Clean Profile Photo Frame -->
+                                <div class="relative mb-4">
+                                    <div class="w-36 h-44 rounded-2xl overflow-hidden border-2 border-brand-500/40 shadow-lg bg-slate-200 dark:bg-slate-800 relative">
+                                        <img id="profileImage" src="profile.jpg" alt="Md. Shariful Islam" class="w-full h-full object-cover object-top block">
+                                    </div>
+                                    <span class="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-full bg-brand-600 text-white font-mono text-[10px] font-bold shadow border border-white dark:border-slate-900">
+                                        8+ YRS EXP
+                                    </span>
+                                </div>
+
+                                <h2 class="text-lg font-bold text-slate-900 dark:text-white">Md. Shariful Islam</h2>
+                                <p class="text-xs font-mono text-brand-600 dark:text-brand-400 mt-0.5">Sr. Executive - IT & Communication</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">The Source (Medici Fashion DMCC)</p>
+
+                                <!-- Quick Stats Grid -->
+                                <div class="grid grid-cols-3 gap-2 w-full mt-5 pt-5 border-t border-slate-200 dark:border-slate-800">
+                                    <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+                                        <span class="text-xl font-extrabold text-brand-600 dark:text-brand-400 block">8+</span>
+                                        <span class="text-[11px] text-slate-500 dark:text-slate-400">Years Exp.</span>
+                                    </div>
+                                    <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+                                        <span class="text-xl font-extrabold text-emerald-600 dark:text-emerald-400 block">6</span>
+                                        <span class="text-[11px] text-slate-500 dark:text-slate-400">Case Studies</span>
+                                    </div>
+                                    <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+                                        <span class="text-xl font-extrabold text-amber-500 block">4</span>
+                                        <span class="text-[11px] text-slate-500 dark:text-slate-400">Global Certs</span>
+                                    </div>
+                                </div>
+
+                                <!-- Core Badges -->
+                                <div class="flex flex-wrap justify-center gap-1.5 mt-4">
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CCNA 200-301</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MTCNA</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Microsoft 365</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Active Directory</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">cnMaestro VM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: ABOUT ME & MULTINATIONAL VALUE PROPOSITION -->
+        <section id="about" class="py-16 lg:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">
+                        <span>01 / ABOUT ME & STRENGTHS</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                        What I Offer a Multinational Team
+                    </h2>
+                    <p class="mt-3 text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                        Keeping enterprise infrastructure resilient, maintaining strict asset accountability, and creating clear operational documentation so teams can scale without bottlenecks.
+                    </p>
+                </div>
+
+                <!-- 6 Value Pillars Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Pillar 1: Reliability -->
+                    <div class="group p-6 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition shadow-sm hover:shadow-md">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Reliability & Uptime</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Proactive monitoring, timely OS/security patching, and verified backup routines to protect critical business uptime and disaster recovery readiness.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2: Process Discipline -->
+                    <div class="group p-6 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition shadow-sm hover:shadow-md">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Process Discipline</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Signed device handover and return records, repeatable employee onboarding checklists, and an up-to-date multi-location IT asset inventory.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3: Hands-on Breadth -->
+                    <div class="group p-6 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-cyan-500/50 transition shadow-sm hover:shadow-md">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Hands-on Breadth</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Windows and macOS, Windows Server and Active Directory, Microsoft 365, Cisco, MikroTik and Meraki networks, CCTV, access control and PBX.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 4: Cost Awareness -->
+                    <div class="group p-6 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-amber-500/50 transition shadow-sm hover:shadow-md">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="TrendingDown" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Cost Awareness</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Comprehensive software licence audits against actual usage and practical evaluation of open-source/alternative tools to optimise IT budgets.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 5: Service Mindset -->
+                    <div class="group p-6 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 transition shadow-sm hover:shadow-md">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="headset" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Service Mindset</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Clear, empathetic communication with end-users, disciplined ticket follow-through to closure, and calm handling of urgent operational incidents.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 6: Multilingual Communication -->
+                    <div class="group p-6 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-rose-500/50 transition shadow-sm hover:shadow-md">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="globe-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Multilingual Support</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Fluent in <strong>English</strong> and <strong>Bengali</strong>, with working proficiency in <strong>Hindi</strong>; comfortable supporting diverse teams on-site and remotely.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TECHNICAL SKILLS SNAPSHOT -->
+        <section id="skills" class="py-16 lg:py-24 bg-slate-100/60 dark:bg-slate-900/40 border-b border-slate-200/80 dark:border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">
+                        <span>02 / TECHNICAL COMPETENCIES</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                        Skills Snapshot
+                    </h2>
+                    <p class="mt-3 text-slate-600 dark:text-slate-400 text-base">
+                        Production-tested across enterprise domains, corporate headquarters, and multi-site networks.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Category 1: Systems & Platforms -->
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-brand-500/10 text-brand-600 dark:text-brand-400 font-semibold">Systems & Platforms</span>
+                                <i data-lucide="server" class="w-5 h-5 text-brand-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">OS, Server & Virtualization</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                                Windows, macOS, Windows Server, Active Directory, VMware virtualization.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Windows Server</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Active Directory</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">macOS</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Windows 10/11</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">VMware</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Microsoft 365 -->
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 font-semibold">Cloud Productivity</span>
+                                <i data-lucide="cloud-cog" class="w-5 h-5 text-sky-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">Microsoft 365 Administration</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                                User, mailbox, licence and permission administration; Outlook and Office support.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">M365 Admin Center</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Exchange Mailboxes</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Licence Auditing</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">RBAC Permissions</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Outlook/Office</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Networking -->
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">Networking</span>
+                                <i data-lucide="network" class="w-5 h-5 text-emerald-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">Routing, Switching & Wireless</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                                LAN/WAN/VPN, Cisco and MikroTik routers and switches, Cisco and Meraki firewalls, Wi-Fi access points (cnMaestro).
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Cisco Routers/Switches</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">MikroTik</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Meraki Firewalls</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">cnMaestro On-Prem</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">LAN/WAN/VPN</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Security & Backup -->
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-semibold">Security & Continuity</span>
+                                <i data-lucide="shield-alert" class="w-5 h-5 text-amber-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">Security, CCTV & Disaster Recovery</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                                CCTV, access control, PBX, patch management, anti-virus, backup and disaster recovery, IT security policies.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">IP CCTV</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Access Control</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">PBX Systems</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Patch Management</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Backup & DR</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 5: End-User Support -->
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 font-semibold">IT Operations</span>
+                                <i data-lucide="wrench" class="w-5 h-5 text-purple-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">End-User & Hardware Support</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                                Remote and on-site support, new-user setup, desktop and laptop assembly and upgrades, printers and peripherals.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Remote & On-Site</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">RAM/SSD Upgrades</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Network Printers</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">E-Ticketing</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 6: Asset & Vendor Mgmt -->
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 font-semibold">Governance</span>
+                                <i data-lucide="file-spreadsheet" class="w-5 h-5 text-rose-500"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3">Asset & Vendor Management</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                                IT asset inventory, device handover and return records, software licence auditing, vendor sourcing and negotiation.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Asset Inventory</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Handover Forms</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Procurement</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800">Vendor SLA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PROFESSIONAL EXPERIENCE TIMELINE -->
+        <section id="experience" class="py-16 lg:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">
+                            <span>03 / CAREER PROGRESSION (2018 – PRESENT)</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                            Professional Experience
+                        </h2>
+                        <p class="mt-2 text-slate-600 dark:text-slate-400 text-base">
+                            Key responsibilities and operational impact across 5 organizations over 8+ years.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 no-print">
+                        <button onclick="toggleAllExperience(true)" class="px-3 py-1.5 rounded-lg text-xs font-mono border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer">
+                            Expand All Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Vertical Timeline Container -->
+                <div class="relative pl-6 sm:pl-8 border-l-2 border-brand-500/30 space-y-10">
+
+                    <!-- Role 1: The Source (Medici Fashion DMCC) -->
+                    <div class="relative group">
+                        <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-brand-500/20"></span>
+                        <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border-2 border-brand-500/30 shadow-md">
+                            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                                <div>
+                                    <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 mb-2">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                                        CURRENT ROLE • JAN 2025 – PRESENT
+                                    </div>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Sr. Executive - IT & Communication</h3>
+                                    <p class="text-base font-medium text-brand-600 dark:text-brand-400">The Source (Medici Fashion DMCC) — Bangladesh Office</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                                    International Fashion Company
+                                </span>
+                            </div>
+
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-600 dark:text-slate-300 mt-4">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Provide expert support for <strong>Windows and macOS</strong> systems, covering installation, configuration, updates and troubleshooting.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Administer <strong>Microsoft 365</strong> user accounts, mailboxes, licences and permissions in line with organisational policies.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Manage and maintain <strong>LAN, WAN and VPN</strong> infrastructure; monitor network performance and resolve connectivity issues proactively.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Configure and administer <strong>MikroTik routers</strong>; implement and troubleshoot <strong>Cisco routers, switches and firewalls</strong> to keep network operations secure.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Deploy and configure an <strong>on-premise cnMaestro controller (virtual machine)</strong> to manage wireless access points, moving management from the cloud-hosted platform.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Onboard and offboard employees: set up Microsoft 365 accounts, licences and devices; manage device handover and return through <strong>signed acknowledgement forms</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Install, configure and support <strong>CCTV, access control and PBX systems</strong>, as well as network and local printers.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span><strong>Audit software licences</strong> and evaluate alternative tools to optimise licensing costs for management.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Apply system updates and patches and enforce IT security and compliance policies; maintain detailed IT asset inventory across multiple locations.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Monitor backups and verify that critical data can be restored; support business continuity planning and maintain SOPs, network records and asset registers for audit readiness.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5 md:col-span-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Log, prioritise and resolve user requests and incidents through to closure; coordinate with vendors for hardware/connectivity procurement and report IT status, risks and improvement proposals to management.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Walton Group -->
+                    <div class="relative group">
+                        <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-brand-500 transition"></span>
+                        <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                                <div>
+                                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400 block mb-1">APRIL 2021 – DECEMBER 2024 (3 YRS 9 MOS)</span>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Deputy Assistant Director - IT</h3>
+                                    <p class="text-base font-medium text-brand-600 dark:text-brand-400">Walton Group (Corporate Office)</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                                    Large Corporate Conglomerate
+                                </span>
+                            </div>
+
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-600 dark:text-slate-300 mt-4">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Managed <strong>Active Directory</strong> user accounts and profiles in a domain environment; administered <strong>Windows Server</strong>, including user services, updates and basic security configuration.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Responded to technical support requests from end users for computers and software applications, logging and tracking cases in the <strong>e-ticket system</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Set up and installed new computers, networks and software, including operating systems, anti-virus software and applications.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Diagnosed and fixed network problems and hardware or software faults, including replacing parts such as <strong>RAM, SSD, Wi-Fi adapters and cooling fans</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Managed shared folders, access rights and group permissions for departments in line with company policy.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Handled user account creation, password resets and access permissions, and supported email, Outlook and Microsoft Office issues.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Deployed software updates and patches; configured network printers, Wi-Fi routers and other network devices; maintained hardware & software inventories.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Performed routine backups and monitored server and workstation health to prevent downtime; coordinated with vendors for hardware repairs.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: Sustainable Compliance Management Ltd. -->
+                    <div class="relative group">
+                        <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-brand-500 transition"></span>
+                        <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                                <div>
+                                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400 block mb-1">NOVEMBER 2019 – MARCH 2021 (1 YR 5 MOS)</span>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Sr. IT Executive</h3>
+                                    <p class="text-base font-medium text-brand-600 dark:text-brand-400">Sustainable Compliance Management Ltd.</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                                    Compliance Consulting
+                                </span>
+                            </div>
+
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-600 dark:text-slate-300 mt-4">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Managed IT and computer systems end to end, covering implementation, troubleshooting, administration and monitoring.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Planned, organised and evaluated IT and electronic data operations; designed and implemented systems, policies and procedures.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Safeguarded data, network access and backup systems; identified problem areas and delivered timely solutions.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Supported company website development, web-mail and Outlook setup and backup, and worked with the company database and server.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5 md:col-span-2">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Provided company-wide technical support, maintained anti-virus and endpoint protection, documented IT policies and guided users on safe computing practices.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role 4: Hyundai Engineering & Constructions -->
+                    <div class="relative group">
+                        <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-brand-500 transition"></span>
+                        <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                                <div>
+                                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400 block mb-1">OCTOBER 2018 – OCTOBER 2019 (1 YR 1 MO)</span>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Assistant IT Officer</h3>
+                                    <p class="text-base font-medium text-brand-600 dark:text-brand-400">Hyundai Engineering & Constructions</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                                    Engineering & Construction
+                                </span>
+                            </div>
+
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-600 dark:text-slate-300 mt-4">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Implemented, administered and monitored network systems, servers and workstations, including <strong>attendance and access control systems</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Implemented and administered <strong>CCTV surveillance systems</strong>, including device installation, configuration, and regular storage verification.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Assembled, upgraded and troubleshot desktop and laptop computers; supported printers, scanners and other peripherals.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Sourced IT products and mobile devices, negotiated with vendors, and maintained records of allotted PCs and accessories in the IT management system.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role 5: Flora Ltd -->
+                    <div class="relative group">
+                        <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-brand-500 transition"></span>
+                        <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                                <div>
+                                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400 block mb-1">JANUARY 2018 – SEPTEMBER 2018 (9 MOS)</span>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Assistant Systems Engineer</h3>
+                                    <p class="text-base font-medium text-brand-600 dark:text-brand-400">Flora Ltd, Dhaka, Bangladesh</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                                    IT Systems & Enterprise Support
+                                </span>
+                            </div>
+
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-600 dark:text-slate-300 mt-4">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Maintained an accurate inventory of hardware, software and other IT resources; diagnosed faults and replaced defective components.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Performed data backup and disaster recovery operations; handled virus detection, removal and prevention across all client systems.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Installed, configured and troubleshot MS Windows, MS Office, <strong>MS SQL Server</strong>, MS Outlook and <strong>POS systems</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500 shrink-0 mt-1"></i>
+                                    <span>Maintained and administered LAN and VPN networks and ERP software; installed and maintained CCTV cameras and provided helpdesk support.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: 6 REAL-WORLD IT CASE STUDIES (S.A.R. FORMAT) -->
+        <section id="case-studies" class="py-16 lg:py-24 bg-slate-100/60 dark:bg-slate-900/40 border-b border-slate-200/80 dark:border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">
+                            <span>04 / INFRASTRUCTURE & OPERATIONS PROJECTS</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                            6 Highlighted Case Studies
+                        </h2>
+                        <p class="mt-2 text-slate-600 dark:text-slate-400 text-base max-w-2xl">
+                            Drawn from recent and previous roles following the structured <strong>Situation → Action → Result</strong> methodology. Internal IPs, names, and commercial prices are sanitized for confidentiality.
+                        </p>
+                    </div>
+
+                    <!-- Category Filter Pills -->
+                    <div class="flex flex-wrap gap-2 no-print" id="caseFilterContainer">
+                        <button onclick="filterCases('all')" data-filter="all" class="case-filter-btn active px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-brand-600 text-white transition cursor-pointer">
+                            All Projects (6)
+                        </button>
+                        <button onclick="filterCases('network')" data-filter="network" class="case-filter-btn px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500 transition cursor-pointer">
+                            Network & Infra (2)
+                        </button>
+                        <button onclick="filterCases('sysadmin')" data-filter="sysadmin" class="case-filter-btn px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500 transition cursor-pointer">
+                            M365 & Windows Server (2)
+                        </button>
+                        <button onclick="filterCases('governance')" data-filter="governance" class="case-filter-btn px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500 transition cursor-pointer">
+                            Asset & Cost Audit (2)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6 Case Studies Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="caseStudiesGrid">
+
+                    <!-- CASE STUDY 1: cnMaestro Cloud to On-Premise Migration -->
+                    <div class="case-card rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm flex flex-col justify-between" data-category="network">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                                    CASE STUDY 01 • WIRELESS & VM
+                                </span>
+                                <span class="text-xs font-mono text-slate-400">The Source (BD Office)</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                cnMaestro: Cloud to On-Premise Controller Migration
+                            </h3>
+
+                            <div class="space-y-4 text-sm">
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-amber-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-amber-600 dark:text-amber-400 block mb-1">Situation</span>
+                                    <p class="text-slate-600 dark:text-slate-300">Wi-Fi access points across the Bangladesh office were managed through the cloud-hosted cnMaestro platform. Management wanted the controller brought in-house.</p>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-brand-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-brand-600 dark:text-brand-400 block mb-1">Action</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Deployed an on-premise cnMaestro controller as a virtual machine (VM).</li>
+                                        <li>Prepared the VM, network access and login portal for the on-prem controller.</li>
+                                        <li>Moved access point management from the cloud account to the on-premise controller.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-emerald-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Result</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Wireless access points are now managed from a controller under our own control.</li>
+                                        <li>Removed dependence on the cloud-hosted platform for AP management.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Evidence Preview -->
+                        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-mono text-slate-500 flex items-center gap-1.5">
+                                <i data-lucide="cpu" class="w-4 h-4 text-brand-500"></i>
+                                Architecture Diagram Included
+                            </span>
+                            <button onclick="openEvidenceModal(1)" class="no-print inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline cursor-pointer">
+                                <span>Inspect Migration Topology</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CASE STUDY 2: Microsoft 365 Onboarding Process -->
+                    <div class="case-card rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm flex flex-col justify-between" data-category="sysadmin">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-sky-500/10 text-sky-600 dark:text-sky-400">
+                                    CASE STUDY 02 • MICROSOFT 365
+                                </span>
+                                <span class="text-xs font-mono text-slate-400">Identity & Access</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                Standardized Microsoft 365 Onboarding Process
+                            </h3>
+
+                            <div class="space-y-4 text-sm">
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-amber-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-amber-600 dark:text-amber-400 block mb-1">Situation</span>
+                                    <p class="text-slate-600 dark:text-slate-300">New employees needed accounts, licences and working devices quickly, while keeping access strictly in line with company policy.</p>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-brand-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-brand-600 dark:text-brand-400 block mb-1">Action</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Create the Microsoft 365 user account and mailbox; assign the correct licence.</li>
+                                        <li>Set permissions and security/distribution groups according to role.</li>
+                                        <li>Configure the laptop or desktop and hand it over with a signed acknowledgement form.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-emerald-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Result</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>A repeatable onboarding routine: every new joiner gets account, licence, mailbox and device in one controlled process.</li>
+                                        <li>Licence usage stays 100% traceable to named users.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-mono text-slate-500 flex items-center gap-1.5">
+                                <i data-lucide="git-branch" class="w-4 h-4 text-sky-500"></i>
+                                Linked to 7-Step SOP Flowchart
+                            </span>
+                            <a href="#sop" class="no-print inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+                                <span>Jump to Onboarding SOP</span>
+                                <i data-lucide="arrow-down-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CASE STUDY 3: IT Asset Management & Acknowledgement Forms -->
+                    <div class="case-card rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm flex flex-col justify-between" data-category="governance">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-rose-500/10 text-rose-600 dark:text-rose-400">
+                                    CASE STUDY 03 • ASSET GOVERNANCE
+                                </span>
+                                <span class="text-xs font-mono text-slate-400">Audit & Compliance</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                IT Asset Management & Acknowledgement Forms
+                            </h3>
+
+                            <div class="space-y-4 text-sm">
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-amber-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-amber-600 dark:text-amber-400 block mb-1">Situation</span>
+                                    <p class="text-slate-600 dark:text-slate-300">Devices were being issued to staff without a consistent record of who held what, and no matching process for taking devices back.</p>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-brand-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-brand-600 dark:text-brand-400 block mb-1">Action</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Maintained a detailed IT asset inventory across multiple locations.</li>
+                                        <li>Created an Excel "Device Receiving Acknowledgement" form (one sheet per employee) and a matching Device Return form.</li>
+                                        <li>Required physical signatures at handover and at return.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-emerald-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Result</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Clear accountability for every issued laptop, desktop, and peripheral.</li>
+                                        <li>A verifiable written record for returns, resignations and internal/external audits.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-mono text-slate-500 flex items-center gap-1.5">
+                                <i data-lucide="file-Spreadsheet" class="w-4 h-4 text-rose-500"></i>
+                                Sanitized Form Template
+                            </span>
+                            <button onclick="openEvidenceModal(3)" class="no-print inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline cursor-pointer">
+                                <span>Preview Handover Template</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CASE STUDY 4: Software Licence Audit & Cost Optimisation -->
+                    <div class="case-card rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm flex flex-col justify-between" data-category="governance">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                                    CASE STUDY 04 • COST OPTIMISATION
+                                </span>
+                                <span class="text-xs font-mono text-slate-400">Licensing & Open-Source</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                Software Licence Audit & Open-Source Evaluation
+                            </h3>
+
+                            <div class="space-y-4 text-sm">
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-amber-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-amber-600 dark:text-amber-400 block mb-1">Situation</span>
+                                    <p class="text-slate-600 dark:text-slate-300">Management asked for a review of software licensing costs, including commercial design software used by the team.</p>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-brand-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-brand-600 dark:text-brand-400 block mb-1">Action</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Audited active licences against actual users and daily usage requirements.</li>
+                                        <li>Evaluated alternative and open-source tools (<strong>Inkscape, GIMP, Scribus and Penpot</strong>) for suitability.</li>
+                                        <li>Reported the structured findings to management for a decision.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-emerald-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Result</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Management received a factual comparison to support licensing decisions.</li>
+                                        <li>Unused or overlapping commercial licences were identified for immediate cost reduction.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-mono text-slate-500 flex items-center gap-1.5">
+                                <i data-lucide="bar-chart-3" class="w-4 h-4 text-amber-500"></i>
+                                Sanitized Comparison Matrix
+                            </span>
+                            <button onclick="openEvidenceModal(4)" class="no-print inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline cursor-pointer">
+                                <span>View Cost Optimization Matrix</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CASE STUDY 5: Network, CCTV & Security Infrastructure -->
+                    <div class="case-card rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm flex flex-col justify-between" data-category="network">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">
+                                    CASE STUDY 05 • NETWORK & SECURITY
+                                </span>
+                                <span class="text-xs font-mono text-slate-400">Cisco • MikroTik • CCTV</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                Integrated Network, CCTV & Physical Security Infrastructure
+                            </h3>
+
+                            <div class="space-y-4 text-sm">
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-amber-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-amber-600 dark:text-amber-400 block mb-1">Situation</span>
+                                    <p class="text-slate-600 dark:text-slate-300">Offices needed a stable, secure enterprise network plus integrated physical security and communication systems.</p>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-brand-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-brand-600 dark:text-brand-400 block mb-1">Action</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Managed LAN, WAN and VPN; monitored performance and resolved connectivity issues.</li>
+                                        <li>Configured <strong>MikroTik routers</strong>; implemented and troubleshot <strong>Cisco routers, switches and firewalls</strong>.</li>
+                                        <li>Installed and supported <strong>CCTV, access control, PBX and printers</strong>; applied patches and security policies.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-emerald-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Result</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Reliable day-to-day network operation with proactive issue handling.</li>
+                                        <li>Integrated physical security (CCTV, access control) seamlessly with IT operations.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-mono text-slate-500 flex items-center gap-1.5">
+                                <i data-lucide="shield" class="w-4 h-4 text-cyan-500"></i>
+                                Simplified Network Topology
+                            </span>
+                            <button onclick="openEvidenceModal(5)" class="no-print inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline cursor-pointer">
+                                <span>Inspect Network Diagram</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CASE STUDY 6: Active Directory & Windows Server (Walton Group) -->
+                    <div class="case-card rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm flex flex-col justify-between" data-category="sysadmin">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-purple-500/10 text-purple-600 dark:text-purple-400">
+                                    CASE STUDY 06 • ACTIVE DIRECTORY
+                                </span>
+                                <span class="text-xs font-mono text-slate-400">Walton Group HQ</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                Active Directory, Windows Server & Enterprise Support
+                            </h3>
+
+                            <div class="space-y-4 text-sm">
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-amber-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-amber-600 dark:text-amber-400 block mb-1">Situation</span>
+                                    <p class="text-slate-600 dark:text-slate-300">A large corporate office (Walton Group) needed consistent user management and server upkeep in a domain environment.</p>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-brand-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-brand-600 dark:text-brand-400 block mb-1">Action</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Managed Active Directory user accounts and profiles; handled account creation, password resets and departmental access permissions.</li>
+                                        <li>Administered Windows Server, including user services, updates and basic security configuration.</li>
+                                        <li>Resolved hardware/software faults (RAM, SSD, Wi-Fi adapters, cooling fans) and Outlook/Office issues via e-ticketing.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-emerald-500">
+                                    <span class="text-xs font-mono uppercase font-bold text-emerald-600 dark:text-emerald-400 block mb-1">Result</span>
+                                    <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+                                        <li>Quick incident resolution to minimise user downtime across the corporate office.</li>
+                                        <li>Consistent, documented user and shared-folder access management.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs font-mono text-slate-500 flex items-center gap-1.5">
+                                <i data-lucide="terminal" class="w-4 h-4 text-purple-500"></i>
+                                Sanitized Incident Resolution Log
+                            </span>
+                            <button onclick="openEvidenceModal(6)" class="no-print inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline cursor-pointer">
+                                <span>View Resolved Incident Sample</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: PROCESS DOCUMENTATION SAMPLE (SOP) & INCIDENT FRAMEWORK -->
+        <section id="sop" class="py-16 lg:py-24 border-b border-slate-200/80 dark:border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">
+                            <span>05 / STANDARD OPERATING PROCEDURE (SOP) SAMPLE</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                            Process Documentation: Employee Lifecycle
+                        </h2>
+                        <p class="mt-2 text-slate-600 dark:text-slate-400 text-base max-w-2xl">
+                            "I keep systems running, keep assets accountable and document what I build so that others can run it after me."
+                        </p>
+                    </div>
+
+                    <!-- Toggle Onboarding vs Offboarding -->
+                    <div class="inline-flex p-1 rounded-xl bg-slate-200/70 dark:bg-slate-900 border border-slate-300/60 dark:border-slate-800 self-start no-print">
+                        <button id="btnOnboarding" onclick="switchSopMode('onboarding')" class="px-4 py-2 rounded-lg text-xs font-mono font-bold bg-brand-600 text-white shadow transition cursor-pointer">
+                            7-Step Onboarding SOP
+                        </button>
+                        <button id="btnOffboarding" onclick="switchSopMode('offboarding')" class="px-4 py-2 rounded-lg text-xs font-mono font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition cursor-pointer">
+                            Reverse Offboarding Path
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Onboarding 7-Step Flow -->
+                <div id="sopOnboardingView" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Step 1 -->
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">STEP 01</span>
+                            <i data-lucide="user-plus" class="w-4 h-4 text-slate-400"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Receive Request</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            HR or manager sends the new joiner's name, role, department and official start date.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">STEP 02</span>
+                            <i data-lucide="mail-plus" class="w-4 h-4 text-slate-400"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Create Account</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Create the Microsoft 365 user and mailbox; assign the licence; set the initial password to be changed at first sign-in.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">STEP 03</span>
+                            <i data-lucide="key-round" class="w-4 h-4 text-slate-400"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Set Permissions</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Add the user to the required security groups, shared mailboxes and departmental folders for their role.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">STEP 04</span>
+                            <i data-lucide="laptop" class="w-4 h-4 text-slate-400"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Prepare Device</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Install operating system updates, required software and anti-virus; join to the company setup; physically label the asset.
+                        </p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">STEP 05</span>
+                            <i data-lucide="database" class="w-4 h-4 text-slate-400"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Record Asset</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Enter the device serial, model, tag, issue date and assigned user in the central IT asset inventory.
+                        </p>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">STEP 06</span>
+                            <i data-lucide="pen-tool" class="w-4 h-4 text-slate-400"></i>
+                        </div>
+                        <h3 class="font-bold text-base mb-1.5">Signed Handover</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Hand over device and credentials; the employee signs the physical <strong>Device Receiving Acknowledgement</strong> form.
+                        </p>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="p-5 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/30 border border-emerald-500/30 md:col-span-2 flex flex-col justify-center">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">STEP 07 • FINAL VERIFICATION</span>
+                            <i data-lucide="check-check" class="w-5 h-5 text-emerald-500"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1">Confirm & Close Request</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Verify first sign-in, Outlook email flow, network printer mapping, and Wi-Fi/VPN access work seamlessly with the user; close the onboarding ticket.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Offboarding Reverse Flow (Hidden by default) -->
+                <div id="sopOffboardingView" class="hidden grid-cols-1 md:grid-cols-5 gap-4">
+                    <div class="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/20">
+                        <span class="text-xs font-mono font-bold text-rose-500 block mb-2">REV 01 • ACCESS</span>
+                        <h4 class="font-bold text-sm mb-1">Disable Access</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Revoke M365/AD sign-in sessions, reset passwords, and convert mailbox to shared/forwarded per HR policy.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/20">
+                        <span class="text-xs font-mono font-bold text-rose-500 block mb-2">REV 02 • HARDWARE</span>
+                        <h4 class="font-bold text-sm mb-1">Collect Device</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Inspect returned laptop, charger, mouse, and ID/access cards against original issue sheet.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/20">
+                        <span class="text-xs font-mono font-bold text-rose-500 block mb-2">REV 03 • SIGN-OFF</span>
+                        <h4 class="font-bold text-sm mb-1">Device Return Form</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Complete and sign the formal Device Return Acknowledgement form for HR clearance.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/20">
+                        <span class="text-xs font-mono font-bold text-rose-500 block mb-2">REV 04 • LICENCE</span>
+                        <h4 class="font-bold text-sm mb-1">Reclaim Licence</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Remove or reassign Microsoft 365 & commercial software licences to prevent billing waste.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/20">
+                        <span class="text-xs font-mono font-bold text-rose-500 block mb-2">REV 05 • REGISTER</span>
+                        <h4 class="font-bold text-sm mb-1">Update Inventory</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Mark asset status as In-Stock / Ready for Re-provisioning in the master IT Asset Register.</p>
+                    </div>
+                </div>
+
+                <!-- Structured Incident Resolution Methodology Banner -->
+                <div class="mt-10 p-6 sm:p-8 rounded-2xl bg-slate-900 text-white border border-slate-800">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="max-w-xl">
+                            <span class="text-xs font-mono uppercase tracking-wider text-brand-400 block mb-1">STRUCTURED TROUBLESHOOTING METHODOLOGY</span>
+                            <h3 class="text-xl font-bold">5-Stage Incident Reporting & Resolution Format</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 mt-1">
+                                For technical interviews and post-incident reviews, every critical issue is analyzed and documented in this exact 5-step sequence:
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 flex-1">
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700">
+                                <span class="text-[10px] font-mono text-rose-400 block">01. SYMPTOM</span>
+                                <span class="text-xs font-semibold block mt-0.5">What the user reported</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700">
+                                <span class="text-[10px] font-mono text-amber-400 block">02. DIAGNOSIS</span>
+                                <span class="text-xs font-semibold block mt-0.5">What I checked & tested</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700">
+                                <span class="text-[10px] font-mono text-purple-400 block">03. ROOT CAUSE</span>
+                                <span class="text-xs font-semibold block mt-0.5">Underlying failure point</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700">
+                                <span class="text-[10px] font-mono text-sky-400 block">04. FIX</span>
+                                <span class="text-xs font-semibold block mt-0.5">Immediate resolution</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700 col-span-2 sm:col-span-1">
+                                <span class="text-[10px] font-mono text-emerald-400 block">05. PREVENTION</span>
+                                <span class="text-xs font-semibold block mt-0.5">Changed so it won't repeat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: CERTIFICATIONS, EDUCATION, LANGUAGES & ACADEMIC PROJECTS -->
+        <section id="credentials" class="py-16 lg:py-24 bg-slate-100/60 dark:bg-slate-900/40 border-b border-slate-200/80 dark:border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-12">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">
+                        <span>06 / CREDENTIALS & ACADEMIC BACKGROUND</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                        Certifications, Education & Projects
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Left 6 Cols: Professional Certifications -->
+                    <div class="lg:col-span-6 space-y-4">
+                        <h3 class="text-lg font-bold flex items-center gap-2 mb-4">
+                            <i data-lucide="award" class="w-5 h-5 text-brand-500"></i>
+                            <span>Professional Certifications</span>
+                        </h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">CISCO</span>
+                                <h4 class="font-bold text-base mt-2">CCNA 200-301</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Network Fundamentals, Routing & Switching</p>
+                            </div>
+
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">MIKROTIK</span>
+                                <h4 class="font-bold text-base mt-2">MTCNA Certified</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">MikroTik Certified Network Associate</p>
+                            </div>
+
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400">GOOGLE</span>
+                                <h4 class="font-bold text-base mt-2">Google IT Support</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Professional Certificate</p>
+                            </div>
+
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-sky-500/10 text-sky-600 dark:text-sky-400">MICROSOFT</span>
+                                <h4 class="font-bold text-base mt-2">Microsoft IT Support</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Specialist Professional Certificate</p>
+                            </div>
+                        </div>
+
+                        <!-- Languages & Early Academic/Software Projects -->
+                        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm mt-6 space-y-5">
+                            <div>
+                                <h4 class="text-sm font-mono uppercase tracking-wider text-slate-400 mb-3">Language Proficiency</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800"><strong>Bengali:</strong> Fluent (Native)</span>
+                                    <span class="px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800"><strong>English:</strong> Fluent (Professional)</span>
+                                    <span class="px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800"><strong>Hindi:</strong> Moderate (Speaking & Understanding)</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+                                <h4 class="text-sm font-mono uppercase tracking-wider text-slate-400 mb-3">Academic & Software Projects</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+                                    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/70 font-medium flex items-center gap-2">
+                                        <i data-lucide="shopping-bag" class="w-4 h-4 text-brand-500 shrink-0"></i>
+                                        <span>Shop Management System</span>
+                                    </div>
+                                    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/70 font-medium flex items-center gap-2">
+                                        <i data-lucide="train-front" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                        <span>Automated Railway Control System</span>
+                                    </div>
+                                    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/70 font-medium flex items-center gap-2">
+                                        <i data-lucide="smartphone" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                                        <span>Android App (Tourist Guide)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right 6 Cols: Academic Education -->
+                    <div class="lg:col-span-6 space-y-4">
+                        <h3 class="text-lg font-bold flex items-center gap-2 mb-4">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-500"></i>
+                            <span>Academic Education</span>
+                        </h3>
+
+                        <div class="space-y-4">
+                            <!-- B.Sc. in CSE -->
+                            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                    <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">OCTOBER 2017</span>
+                                    <span class="text-xs font-mono text-slate-400">Dhaka, Bangladesh</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 dark:text-white">B.Sc. in Computer Science & Engineering (CSE)</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Bangladesh University of Business & Technology (BUBT), Dhaka</p>
+                            </div>
+
+                            <!-- HSC -->
+                            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                    <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PASSING YEAR: 2012</span>
+                                    <span class="text-xs font-mono text-slate-400">Dhaka Board</span>
+                                </div>
+                                <h4 class="text-base font-bold text-slate-900 dark:text-white">Higher Secondary Certificate (Science)</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Narayanpur Rabeya Degree College</p>
+                            </div>
+
+                            <!-- SSC -->
+                            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                    <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PASSING YEAR: 2010</span>
+                                    <span class="text-xs font-mono text-slate-400">Dhaka Board</span>
+                                </div>
+                                <h4 class="text-base font-bold text-slate-900 dark:text-white">Secondary School Certificate (Science)</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Narayanpur S.U. High School</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: CONTACT & DIRECT MESSAGE -->
+        <section id="contact" class="py-16 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    <!-- Contact Details -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <div>
+                            <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">
+                                <span>07 / CONTACT & AVAILABILITY</span>
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                                Let's Discuss Your IT Infrastructure Needs
+                            </h2>
+                            <p class="mt-3 text-slate-600 dark:text-slate-400 text-base">
+                                Available for Senior IT Operations, System & Network Administration, and Microsoft 365 Management roles across multinational and corporate environments.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                                <div class="w-11 h-11 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-xs font-mono text-slate-400 block">EMAIL</span>
+                                    <a href="mailto:shariful.cse.18@gmail.com" class="font-semibold hover:text-brand-500 truncate block">shariful.cse.18@gmail.com</a>
+                                </div>
+                                <button onclick="copyToClipboard('shariful.cse.18@gmail.com', 'Email copied!')" class="px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-800 hover:bg-brand-500 hover:text-white transition cursor-pointer">
+                                    Copy
+                                </button>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                                <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-xs font-mono text-slate-400 block">PHONE / WHATSAPP</span>
+                                    <div class="font-semibold space-x-2">
+                                        <a href="tel:+8801733633233" class="hover:text-emerald-500">+88 01733633233</a>
+                                        <span class="text-slate-400">|</span>
+                                        <a href="tel:+8801977533466" class="hover:text-emerald-500">+88 01977533466</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                                <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-mono text-slate-400 block">RESIDENCE ADDRESS</span>
+                                    <span class="font-semibold block">Basundhara R/A, Vatara, Dhaka-1212, Bangladesh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-slate-500 dark:text-slate-400 italic pt-2">
+                            * References available upon request. I certify that the information in this portfolio is true to the best of my knowledge.
+                        </p>
+                    </div>
+
+                    <!-- Quick Email Composer Card -->
+                    <div class="lg:col-span-6 no-print">
+                        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg">
+                            <h3 class="text-xl font-bold mb-2">Send a Direct Inquiry</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">
+                                Fill out the fields below to generate a pre-formatted email directly to <strong>Md. Shariful Islam</strong>.
+                            </p>
+
+                            <form onsubmit="handleQuickMail(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1.5">Your Name</label>
+                                        <input id="senderName" type="text" required placeholder="e.g. Hiring Manager" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none focus:border-brand-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1.5">Company / Organization</label>
+                                        <input id="senderOrg" type="text" required placeholder="e.g. Multinational Corp" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none focus:border-brand-500">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1.5">Subject / Role</label>
+                                    <input id="mailSubject" type="text" required placeholder="Interview Invitation: Senior IT / System Administrator" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none focus:border-brand-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1.5">Message</label>
+                                    <textarea id="mailBody" rows="4" required placeholder="Hi Shariful, we reviewed your IT portfolio and case studies..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none focus:border-brand-500"></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 flex items-center justify-center gap-2 transition cursor-pointer">
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    <span>Compose Email to Shariful</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Clean - No Vercel Deploy Link) -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-8 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2 text-center sm:text-left">
+                <span class="w-6 h-6 rounded-md bg-brand-600 text-white font-mono font-bold inline-flex items-center justify-center shrink-0">SI</span>
+                <span>© <span id="currentYear">2026</span> <strong>Md. Shariful Islam</strong> • IT Portfolio (System & Network Administration | Microsoft 365)</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="window.print()" class="hover:text-brand-500 flex items-center gap-1 cursor-pointer">
+                    <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                    <span>Print Portfolio</span>
+                </button>
+                <a href="#" class="hover:text-brand-500 flex items-center gap-1">
+                    <span>Back to top</span>
+                    <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    </div> <!-- End of .screen-only wrapper -->
+
+    <!-- ==================== DEDICATED A4 PRINT / PDF PORTFOLIO ENGINE ==================== -->
+    <div id="print-document" class="hidden print:block text-slate-900 bg-white">
+        <!-- Print Header -->
+        <div class="border-b-2 border-slate-900 pb-3 mb-4 flex justify-between items-center gap-4">
+            <div class="flex items-center gap-4">
+                <div class="w-16 h-20 rounded-lg overflow-hidden border border-slate-300 bg-slate-100 shrink-0">
+                    <img src="profile.jpg" alt="Md. Shariful Islam" class="w-full h-full object-cover object-top block">
+                </div>
+                <div>
+                    <h1 class="text-2xl font-extrabold uppercase tracking-tight text-slate-900">Md. Shariful Islam</h1>
+                    <p class="text-xs font-bold text-blue-700 mt-0.5">IT Professional | System & Network Administration | Microsoft 365</p>
+                    <p class="text-[10px] text-slate-600 mt-1">Case studies, processes and credentials from 8+ years of IT operations</p>
+                </div>
+            </div>
+            <div class="text-right text-[10px] space-y-0.5 shrink-0">
+                <div><strong>Email:</strong> shariful.cse.18@gmail.com</div>
+                <div><strong>Phone:</strong> +88 01733633233 | +88 01977533466</div>
+                <div><strong>Location:</strong> Basundhara R/A, Vatara, Dhaka-1212, Bangladesh</div>
+            </div>
+        </div>
+
+        <!-- Print Overview & Strengths -->
+        <div class="mb-4 print-avoid-break">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 border-b border-slate-300 pb-1 mb-2">1. Executive Overview & Core Strengths</h2>
+            <p class="text-[10pt] text-slate-800 mb-2 text-justify">
+                IT professional with over 8 years of experience in system administration, network management and end-user support across diverse IT environments. Hands-on expertise in Windows and macOS platforms, Windows Server and Active Directory, VMware virtualization, Microsoft 365 administration, and network infrastructure built on Cisco, MikroTik and Meraki. Experienced in CCTV and access control systems, IT asset management and security compliance, with a focus on system uptime, security and dependable day-to-day IT operations.
+            </p>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-[9.5pt] text-slate-800">
+                <div>• <strong>Reliability:</strong> Proactive monitoring, patching & backup to protect uptime.</div>
+                <div>• <strong>Process Discipline:</strong> Signed handover/return records & asset inventory.</div>
+                <div>• <strong>Hands-on Breadth:</strong> Windows/macOS, AD, M365, Cisco, MikroTik, Meraki, CCTV.</div>
+                <div>• <strong>Cost Awareness:</strong> Software licence audits & open-source tool evaluation.</div>
+                <div>• <strong>Service Mindset:</strong> Clear user communication & urgent incident handling.</div>
+                <div>• <strong>Communication:</strong> Fluent English & Bengali, working Hindi (On-site/Remote).</div>
+            </div>
+        </div>
+
+        <!-- Print Skills Snapshot Table -->
+        <div class="mb-4 print-avoid-break">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 border-b border-slate-300 pb-1 mb-2">2. Technical Skills Snapshot</h2>
+            <table class="w-full text-[9.5pt] border-collapse border border-slate-300">
+                <tbody>
+                    <tr>
+                        <td class="border border-slate-300 px-2 py-1 font-bold bg-slate-100 w-40">Systems & Platforms</td>
+                        <td class="border border-slate-300 px-2 py-1">Windows, macOS, Windows Server, Active Directory, VMware virtualization</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-300 px-2 py-1 font-bold bg-slate-100">Microsoft 365</td>
+                        <td class="border border-slate-300 px-2 py-1">User, mailbox, licence and permission administration; Outlook and Office support</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-300 px-2 py-1 font-bold bg-slate-100">Networking</td>
+                        <td class="border border-slate-300 px-2 py-1">LAN/WAN/VPN, Cisco and MikroTik routers and switches, Cisco and Meraki firewalls, Wi-Fi APs (cnMaestro)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-300 px-2 py-1 font-bold bg-slate-100">Security & Backup</td>
+                        <td class="border border-slate-300 px-2 py-1">CCTV, access control, PBX, patch management, anti-virus, backup & disaster recovery, IT security policies</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-300 px-2 py-1 font-bold bg-slate-100">End-User Support</td>
+                        <td class="border border-slate-300 px-2 py-1">Remote and on-site support, new-user setup, desktop and laptop assembly and upgrades, printers & peripherals</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-300 px-2 py-1 font-bold bg-slate-100">Asset & Vendor Mgmt</td>
+                        <td class="border border-slate-300 px-2 py-1">IT asset inventory, device handover and return records, software licence auditing, vendor sourcing & negotiation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Print Professional Experience -->
+        <div class="mb-4">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 border-b border-slate-300 pb-1 mb-2">3. Professional Experience (8+ Years)</h2>
+
+            <div class="mb-3 print-avoid-break">
+                <div class="flex justify-between font-bold text-[10pt]">
+                    <span>Sr. Executive - IT & Communication | The Source (Medici Fashion DMCC) - Bangladesh Office</span>
+                    <span>Jan 2025 – Present</span>
+                </div>
+                <ul class="list-disc list-inside text-[9pt] text-slate-800 space-y-0.5 mt-1">
+                    <li>Provide expert support for Windows and macOS systems; administer Microsoft 365 user accounts, mailboxes, licences and permissions.</li>
+                    <li>Manage LAN, WAN and VPN infrastructure; configure MikroTik routers; implement and troubleshoot Cisco routers, switches and firewalls.</li>
+                    <li>Deployed and configured an on-premise cnMaestro controller (VM) to manage wireless access points, migrating from cloud-hosted platform.</li>
+                    <li>Install and support CCTV, access control, PBX and printers; onboard/offboard employees with signed acknowledgement forms.</li>
+                    <li>Audit software licences and evaluate alternative tools to optimise costs; monitor backups, maintain SOPs, asset registers and vendor SLAs.</li>
+                </ul>
+            </div>
+
+            <div class="mb-3 print-avoid-break">
+                <div class="flex justify-between font-bold text-[10pt]">
+                    <span>Deputy Assistant Director - IT | Walton Group (Corporate Office)</span>
+                    <span>Apr 2021 – Dec 2024</span>
+                </div>
+                <ul class="list-disc list-inside text-[9pt] text-slate-800 space-y-0.5 mt-1">
+                    <li>Managed Active Directory user accounts and profiles in a domain environment; administered Windows Server, user services, updates and security.</li>
+                    <li>Responded to end-user technical requests via the e-ticket system; managed shared folders, access rights and departmental group permissions.</li>
+                    <li>Diagnosed and resolved network, software and hardware faults (replacing RAM, SSD, Wi-Fi adapters, cooling fans) and supported Outlook/Office.</li>
+                    <li>Maintained hardware/software inventories, performed routine backups, monitored server health and coordinated vendor repairs.</li>
+                </ul>
+            </div>
+
+            <div class="mb-3 print-avoid-break">
+                <div class="flex justify-between font-bold text-[10pt]">
+                    <span>Sr. IT Executive | Sustainable Compliance Management Ltd.</span>
+                    <span>Nov 2019 – Mar 2021</span>
+                </div>
+                <ul class="list-disc list-inside text-[9pt] text-slate-800 space-y-0.5 mt-1">
+                    <li>Managed IT systems end to end; planned and evaluated electronic data operations; safeguarded data, network access and backup systems.</li>
+                    <li>Supported website development, web-mail/Outlook setup, database/server administration, endpoint protection and IT policy documentation.</li>
+                </ul>
+            </div>
+
+            <div class="mb-3 print-avoid-break">
+                <div class="flex justify-between font-bold text-[10pt]">
+                    <span>Assistant IT Officer | Hyundai Engineering & Constructions</span>
+                    <span>Oct 2018 – Oct 2019</span>
+                </div>
+                <ul class="list-disc list-inside text-[9pt] text-slate-800 space-y-0.5 mt-1">
+                    <li>Implemented and monitored network systems, servers, workstations, attendance/access control and CCTV surveillance systems.</li>
+                    <li>Assembled/upgraded desktops and laptops; sourced IT products, negotiated with vendors and maintained allotted PC records.</li>
+                </ul>
+            </div>
+
+            <div class="mb-2 print-avoid-break">
+                <div class="flex justify-between font-bold text-[10pt]">
+                    <span>Assistant Systems Engineer | Flora Ltd, Dhaka, Bangladesh</span>
+                    <span>Jan 2018 – Sep 2018</span>
+                </div>
+                <ul class="list-disc list-inside text-[9pt] text-slate-800 space-y-0.5 mt-1">
+                    <li>Maintained IT inventory; performed data backup, disaster recovery and virus prevention; supported MS SQL Server, POS, LAN/VPN and ERP.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Print Case Studies -->
+        <div class="mb-4 print-avoid-break">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 border-b border-slate-300 pb-1 mb-2">4. Key IT Project Case Studies (Situation • Action • Result)</h2>
+            <div class="grid grid-cols-2 gap-2.5 text-[8.8pt]">
+                <div class="border border-slate-300 p-2 rounded">
+                    <div class="font-bold text-slate-900">Case Study 1: cnMaestro Cloud to On-Premise Migration</div>
+                    <div><strong>Situation:</strong> Office Wi-Fi APs were on cloud cnMaestro; needed in-house control.</div>
+                    <div><strong>Action:</strong> Deployed on-prem cnMaestro VM, configured portal & migrated APs.</div>
+                    <div><strong>Result:</strong> Full local controller ownership; removed cloud dependency.</div>
+                </div>
+                <div class="border border-slate-300 p-2 rounded">
+                    <div class="font-bold text-slate-900">Case Study 2: Microsoft 365 Onboarding Process</div>
+                    <div><strong>Situation:</strong> New joiners needed rapid, policy-compliant accounts & devices.</div>
+                    <div><strong>Action:</strong> Standardized M365 mailbox/licence setup, RBAC groups & signed handover.</div>
+                    <div><strong>Result:</strong> Repeatable onboarding routine with 100% traceable user licences.</div>
+                </div>
+                <div class="border border-slate-300 p-2 rounded">
+                    <div class="font-bold text-slate-900">Case Study 3: IT Asset Management & Handover Forms</div>
+                    <div><strong>Situation:</strong> Devices issued without consistent handover or return records.</div>
+                    <div><strong>Action:</strong> Built multi-site inventory + signed Receiving & Return Excel forms.</div>
+                    <div><strong>Result:</strong> Complete device accountability for resignations and audits.</div>
+                </div>
+                <div class="border border-slate-300 p-2 rounded">
+                    <div class="font-bold text-slate-900">Case Study 4: Software Licence Audit & Cost Optimisation</div>
+                    <div><strong>Situation:</strong> Management requested a review of commercial design software costs.</div>
+                    <div><strong>Action:</strong> Audited usage; evaluated open-source tools (Inkscape, GIMP, Scribus, Penpot).</div>
+                    <div><strong>Result:</strong> Factual comparison delivered; unused/overlapping licences reclaimed.</div>
+                </div>
+                <div class="border border-slate-300 p-2 rounded">
+                    <div class="font-bold text-slate-900">Case Study 5: Network, CCTV & Security Infrastructure</div>
+                    <div><strong>Situation:</strong> Offices required stable LAN/WAN/VPN and physical security.</div>
+                    <div><strong>Action:</strong> Configured MikroTik & Cisco devices; integrated CCTV, access control & PBX.</div>
+                    <div><strong>Result:</strong> High network uptime and unified IT/physical security operations.</div>
+                </div>
+                <div class="border border-slate-300 p-2 rounded">
+                    <div class="font-bold text-slate-900">Case Study 6: Active Directory & Windows Server (Walton)</div>
+                    <div><strong>Situation:</strong> Corporate HQ needed consistent domain user & server management.</div>
+                    <div><strong>Action:</strong> Administered AD accounts/permissions, Windows Server updates & hardware fixes.</div>
+                    <div><strong>Result:</strong> Fast incident resolution and documented access governance.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Print SOP & Credentials -->
+        <div class="grid grid-cols-12 gap-4 print-avoid-break">
+            <div class="col-span-7">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 border-b border-slate-300 pb-1 mb-1.5">5. SOP Sample: New Employee IT Onboarding</h2>
+                <table class="w-full text-[8.5pt] border-collapse border border-slate-300">
+                    <thead>
+                        <tr class="bg-slate-100">
+                            <th class="border border-slate-300 px-1.5 py-0.5 text-left">Step</th>
+                            <th class="border border-slate-300 px-1.5 py-0.5 text-left">Action</th>
+                            <th class="border border-slate-300 px-1.5 py-0.5 text-left">Operational Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border border-slate-300 px-1.5 py-0.5 font-bold">1</td><td class="border border-slate-300 px-1.5 py-0.5 font-semibold">Receive request</td><td class="border border-slate-300 px-1.5 py-0.5">HR/manager sends joiner's name, role, dept & start date.</td></tr>
+                        <tr><td class="border border-slate-300 px-1.5 py-0.5 font-bold">2</td><td class="border border-slate-300 px-1.5 py-0.5 font-semibold">Create account</td><td class="border border-slate-300 px-1.5 py-0.5">Create M365 user/mailbox, assign licence & initial password.</td></tr>
+                        <tr><td class="border border-slate-300 px-1.5 py-0.5 font-bold">3</td><td class="border border-slate-300 px-1.5 py-0.5 font-semibold">Set permissions</td><td class="border border-slate-300 px-1.5 py-0.5">Add user to required groups, shared mailboxes & folders.</td></tr>
+                        <tr><td class="border border-slate-300 px-1.5 py-0.5 font-bold">4</td><td class="border border-slate-300 px-1.5 py-0.5 font-semibold">Prepare device</td><td class="border border-slate-300 px-1.5 py-0.5">Install OS updates, software, AV; join setup & label asset.</td></tr>
+                        <tr><td class="border border-slate-300 px-1.5 py-0.5 font-bold">5</td><td class="border border-slate-300 px-1.5 py-0.5 font-semibold">Record asset</td><td class="border border-slate-300 px-1.5 py-0.5">Enter device in IT asset inventory with date & user.</td></tr>
+                        <tr><td class="border border-slate-300 px-1.5 py-0.5 font-bold">6</td><td class="border border-slate-300 px-1.5 py-0.5 font-semibold">Handover</td><td class="border border-slate-300 px-1.5 py-0.5">Deliver device; employee signs Receiving Acknowledgement.</td></tr>
+                        <tr><td class="border border-slate-300 px-1.5 py-0.5 font-bold">7</td><td class="border border-slate-300 px-1.5 py-0.5 font-semibold">Confirm</td><td class="border border-slate-300 px-1.5 py-0.5">Verify sign-in, email, printer & network access; close ticket.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-span-5 space-y-2 text-[8.8pt]">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 border-b border-slate-300 pb-1 mb-1">6. Certifications</h2>
+                    <ul class="list-disc list-inside space-y-0.5">
+                        <li><strong>CCNA 200-301</strong> – Network Fundamentals</li>
+                        <li><strong>MTCNA</strong> – MikroTik Certified Network Associate</li>
+                        <li><strong>Google IT Support</strong> Professional Certificate</li>
+                        <li><strong>Microsoft IT Support</strong> Specialist Certificate</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 border-b border-slate-300 pb-1 mb-1">7. Academic Education</h2>
+                    <div>• <strong>B.Sc. in CSE</strong> – BUBT, Dhaka (Oct 2017)</div>
+                    <div>• <strong>HSC (Science)</strong> – Narayanpur Rabeya Degree College (2012)</div>
+                    <div>• <strong>SSC (Science)</strong> – Narayanpur S.U. High School (2010)</div>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 border-b border-slate-300 pb-1 mb-1">8. Languages & Projects</h2>
+                    <div><strong>Languages:</strong> Bengali (Fluent), English (Fluent), Hindi (Moderate)</div>
+                    <div><strong>Projects:</strong> Shop Mgmt System, Automated Railway Control, Tourist Guide Android App</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CASE STUDY EVIDENCE MODAL (Dynamic Diagram & Sanitized Templates) -->
+    <div id="evidenceModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm no-print">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+                <div>
+                    <span id="evidenceTag" class="text-xs font-mono uppercase text-brand-500 font-bold">CASE STUDY ARTIFACT</span>
+                    <h3 id="evidenceTitle" class="text-xl font-bold text-slate-900 dark:text-white mt-0.5">Architecture & Evidence Preview</h3>
+                </div>
+                <button onclick="closeModal('evidenceModal')" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-rose-500 hover:text-white transition cursor-pointer">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div id="evidenceContent" class="py-6 text-sm">
+                <!-- Populated dynamically via JS -->
+            </div>
+            <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                <span>Note: Internal IP addresses, hostnames, and commercial prices are omitted per corporate policy.</span>
+                <button onclick="closeModal('evidenceModal')" class="px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold cursor-pointer">Close Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden items-center gap-2.5 px-4 py-3 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-xl text-xs font-semibold no-print">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 dark:text-emerald-600"></i>
+        <span id="toastMsg">Copied to clipboard!</span>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Dark / Light Mode Toggle
+        const themeToggleBtn = document.getElementById('themeToggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Clipboard Helper (compatible with iframe restrictions)
+        function copyToClipboard(text, message) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast(message || 'Copied to clipboard!');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 2800);
+        }
+
+        // Filter Case Studies
+        function filterCases(category) {
+            const cards = document.querySelectorAll('.case-card');
+            const buttons = document.querySelectorAll('.case-filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.className = 'case-filter-btn active px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-brand-600 text-white transition cursor-pointer';
+                } else {
+                    btn.className = 'case-filter-btn px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500 transition cursor-pointer';
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.classList.remove('hidden');
+                    card.classList.add('flex');
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('flex');
+                }
+            });
+        }
+
+        // Toggle SOP Onboarding vs Offboarding
+        function switchSopMode(mode) {
+            const onboardingView = document.getElementById('sopOnboardingView');
+            const offboardingView = document.getElementById('sopOffboardingView');
+            const btnOn = document.getElementById('btnOnboarding');
+            const btnOff = document.getElementById('btnOffboarding');
+
+            if (mode === 'onboarding') {
+                onboardingView.classList.remove('hidden');
+                onboardingView.classList.add('grid');
+                offboardingView.classList.add('hidden');
+                offboardingView.classList.remove('grid');
+                btnOn.className = 'px-4 py-2 rounded-lg text-xs font-mono font-bold bg-brand-600 text-white shadow transition cursor-pointer';
+                btnOff.className = 'px-4 py-2 rounded-lg text-xs font-mono font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition cursor-pointer';
+            } else {
+                onboardingView.classList.add('hidden');
+                onboardingView.classList.remove('grid');
+                offboardingView.classList.remove('hidden');
+                offboardingView.classList.add('grid');
+                btnOff.className = 'px-4 py-2 rounded-lg text-xs font-mono font-bold bg-rose-600 text-white shadow transition cursor-pointer';
+                btnOn.className = 'px-4 py-2 rounded-lg text-xs font-mono font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition cursor-pointer';
+            }
+        }
+
+        // Modal Handlers
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Case Study Interactive Evidence Data
+        function openEvidenceModal(caseId) {
+            const titleEl = document.getElementById('evidenceTitle');
+            const tagEl = document.getElementById('evidenceTag');
+            const contentEl = document.getElementById('evidenceContent');
+
+            if (caseId === 1) {
+                tagEl.textContent = 'CASE STUDY 01 • SIMPLIFIED NETWORK DIAGRAM';
+                titleEl.textContent = 'cnMaestro: Cloud to On-Premise VM Migration';
+                contentEl.innerHTML = `
+                    <div class="p-5 rounded-2xl bg-slate-950 text-slate-200 font-mono text-xs space-y-4 border border-slate-800">
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center">
+                            <div class="p-4 rounded-xl bg-rose-950/40 border border-rose-500/30 flex-1 w-full">
+                                <span class="text-rose-400 font-bold block mb-1">[BEFORE: CLOUD HOSTED]</span>
+                                <span>Cambium Cloud Portal</span>
+                                <span class="block text-[10px] text-slate-400 mt-1">External Dependency via WAN</span>
+                            </div>
+                            <div class="text-emerald-400 font-bold">=== MIGRATED TO ===►</div>
+                            <div class="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 flex-1 w-full">
+                                <span class="text-emerald-400 font-bold block mb-1">[AFTER: ON-PREMISE VM]</span>
+                                <span>Local Hypervisor (cnMaestro VM)</span>
+                                <span class="block text-[10px] text-slate-400 mt-1">100% In-House LAN Control</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                            <span class="text-brand-400 font-bold block mb-2">Managed Office Wireless Infrastructure (Bangladesh Office)</span>
+                            <div class="grid grid-cols-3 gap-2 text-[11px]">
+                                <div class="p-2 rounded bg-slate-800">Floor-1 AP Cluster</div>
+                                <div class="p-2 rounded bg-slate-800">Floor-2 AP Cluster</div>
+                                <div class="p-2 rounded bg-slate-800">Conference & Guest Wi-Fi</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (caseId === 3) {
+                tagEl.textContent = 'CASE STUDY 03 • SANITIZED FORM TEMPLATE';
+                titleEl.textContent = 'Device Receiving & Return Acknowledgement Form';
+                contentEl.innerHTML = `
+                    <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 font-mono text-xs space-y-4">
+                        <div class="flex justify-between items-center border-b border-slate-300 dark:border-slate-700 pb-2">
+                            <span class="font-bold text-sm">IT ASSET HANDOVER / RETURN ACKNOWLEDGEMENT</span>
+                            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-500">AUDIT READY</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div><strong>Employee Name:</strong> [REDACTED_USER]</div>
+                            <div><strong>Department:</strong> Merchandising / Operations</div>
+                            <div><strong>Asset Tag:</strong> TS-BD-LPT-00XX</div>
+                            <div><strong>Handover Date:</strong> YYYY-MM-DD</div>
+                        </div>
+                        <table class="w-full text-left border-collapse border border-slate-300 dark:border-slate-700">
+                            <thead>
+                                <tr class="bg-slate-200 dark:bg-slate-900">
+                                    <th class="p-2 border border-slate-300 dark:border-slate-700">Item Description</th>
+                                    <th class="p-2 border border-slate-300 dark:border-slate-700">Serial No.</th>
+                                    <th class="p-2 border border-slate-300 dark:border-slate-700">Condition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-2 border border-slate-300 dark:border-slate-700">Business Laptop + Power Adapter</td>
+                                    <td class="p-2 border border-slate-300 dark:border-slate-700">SN-XXXX-REDACTED</td>
+                                    <td class="p-2 border border-slate-300 dark:border-slate-700">Verified Working</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 border border-slate-300 dark:border-slate-700">Wireless Mouse & Carry Bag</td>
+                                    <td class="p-2 border border-slate-300 dark:border-slate-700">ACC-XXXX</td>
+                                    <td class="p-2 border border-slate-300 dark:border-slate-700">New</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="border-t border-dashed border-slate-400 pt-1">Employee Signature & Date</div>
+                            <div class="border-t border-dashed border-slate-400 pt-1">IT Administrator Signature</div>
+                        </div>
+                    </div>
+                `;
+            } else if (caseId === 4) {
+                tagEl.textContent = 'CASE STUDY 04 • SANITIZED COST AUDIT COMPARISON';
+                titleEl.textContent = 'Software Licence Audit & Open-Source Alternative Matrix';
+                contentEl.innerHTML = `
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs font-mono">
+                            <thead>
+                                <tr class="bg-slate-100 dark:bg-slate-800">
+                                    <th class="p-3 border border-slate-200 dark:border-slate-700">Use Case</th>
+                                    <th class="p-3 border border-slate-200 dark:border-slate-700">Evaluated Open-Source Tool</th>
+                                    <th class="p-3 border border-slate-200 dark:border-slate-700">Target User Tier</th>
+                                    <th class="p-3 border border-slate-200 dark:border-slate-700">Est. Licence Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Vector Graphics & Illustration</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700 font-bold text-brand-500">Inkscape</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Light / Occasional Editors</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700 text-emerald-500">100% Seat Cost Saved</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Image Editing & Retouching</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700 font-bold text-brand-500">GIMP</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Secondary View/Crop Users</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700 text-emerald-500">Reclaimed Unused Seats</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Desktop Publishing / Layout</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700 font-bold text-brand-500">Scribus</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Internal Doc Formatting</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700 text-emerald-500">Eliminated Overlap</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700">UI / Collaborative Prototyping</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700 font-bold text-brand-500">Penpot</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Cross-Team Reviewers</td>
+                                    <td class="p-3 border border-slate-200 dark:border-slate-700 text-emerald-500">Zero Per-User Fee</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            } else if (caseId === 5) {
+                tagEl.textContent = 'CASE STUDY 05 • MULTI-LAYER OFFICE TOPOLOGY';
+                titleEl.textContent = 'Enterprise Network, CCTV & Physical Security Topology';
+                contentEl.innerHTML = `
+                    <div class="p-5 rounded-2xl bg-slate-950 text-slate-200 font-mono text-xs space-y-3 border border-slate-800">
+                        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                            <span class="text-cyan-400 font-bold">[ISP Primary + Failover WAN Links / Site-to-Site VPN]</span>
+                        </div>
+                        <div class="text-center text-slate-500">▼</div>
+                        <div class="p-3 rounded-xl bg-slate-900 border border-brand-500/40 text-center">
+                            <span class="text-brand-400 font-bold">[Edge Routing & Firewall Layer: Cisco / Meraki / MikroTik]</span>
+                        </div>
+                        <div class="text-center text-slate-500">▼</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="text-emerald-400 font-bold block">Data & Wi-Fi VLAN</span>
+                                <span class="text-[11px] text-slate-400">Managed Switches + cnMaestro APs</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="text-amber-400 font-bold block">Physical Security VLAN</span>
+                                <span class="text-[11px] text-slate-400">IP CCTV NVR + Biometric Access Control</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="text-purple-400 font-bold block">Voice & Print VLAN</span>
+                                <span class="text-[11px] text-slate-400">PBX Extensions + Network Printers</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (caseId === 6) {
+                tagEl.textContent = 'CASE STUDY 06 • SANITIZED INCIDENT LOG (WALTON GROUP)';
+                titleEl.textContent = 'Sample Resolved Incident (S.D.R.F.P. Format)';
+                contentEl.innerHTML = `
+                    <div class="space-y-3 text-xs font-mono">
+                        <div class="p-3 rounded-xl bg-rose-500/10 border border-rose-500/20">
+                            <strong class="text-rose-500 block">1. SYMPTOM:</strong>
+                            Department users reported inability to access shared departmental network drives and intermittent workstation freezes after morning login.
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20">
+                            <strong class="text-amber-500 block">2. DIAGNOSIS:</strong>
+                            Checked e-ticket logs, verified Active Directory security group memberships, tested DNS resolution against Windows Server DC, and inspected workstation SMART/RAM diagnostics on affected PCs.
+                        </div>
+                        <div class="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20">
+                            <strong class="text-purple-500 block">3. ROOT CAUSE:</strong>
+                            Stale cached credentials combined with an updated departmental GPO permission scope; one workstation additionally had a failing HDD sector causing explorer lockups.
+                        </div>
+                        <div class="p-3 rounded-xl bg-sky-500/10 border border-sky-500/20">
+                            <strong class="text-sky-500 block">4. FIX:</strong>
+                            Updated AD security group nesting, forced group policy update (<code class="bg-slate-800 text-white px-1 rounded">gpupdate /force</code>), and upgraded the faulty workstation with a new SSD + fresh OS/domain join.
+                        </div>
+                        <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+                            <strong class="text-emerald-500 block">5. PREVENTION:</strong>
+                            Documented standard departmental group permission matrix and scheduled proactive workstation health checks.
+                        </div>
+                    </div>
+                `;
+            }
+
+            openModal('evidenceModal');
+        }
+
+        // Quick Email Form Handler
+        function handleQuickMail(e) {
+            e.preventDefault();
+            const name = document.getElementById('senderName').value.trim();
+            const org = document.getElementById('senderOrg').value.trim();
+            const subject = document.getElementById('mailSubject').value.trim();
+            const body = document.getElementById('mailBody').value.trim();
+
+            const fullBody = `Hello Md. Shariful Islam,\n\n${body}\n\nBest regards,\n${name}\n${org}`;
+            const mailtoUrl = `mailto:shariful.cse.18@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullBody)}`;
+            window.location.href = mailtoUrl;
+            showToast('Opening your email client...');
+        }
+
+        function toggleAllExperience() {
+            showToast('All 5 roles and responsibilities are fully expanded!');
+        }
+    </script>
+</body>
+</html>
